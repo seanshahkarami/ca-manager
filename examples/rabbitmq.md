@@ -57,8 +57,9 @@ interface.
 To complete this example, let's connect a Python client using the
 [pika](http://pika.readthedocs.io/en/0.10.0/) library.
 
-First, the client needs a copy of the CA's certificate. Let's suppose we
-copy it to `/path/to/ca.crt`. Below is the complete example client code.
+In order to authenticate the server, the client needs to know and trust who the
+CA is who signed the server certificate. Concretely, this means we need to copy
+the CA certificate to the client at some path `/path/to/ca.crt`.
 
 ```python
 import pika
