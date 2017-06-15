@@ -62,26 +62,20 @@ ssl_options = {
     'cert_reqs': ssl.CERT_REQUIRED,
 }
 
-credentials = pika.PlainCredentials(
-  username='myuser',
-  password='mypassword')
+credentials = pika.PlainCredentials(username='myuser',
+                                    password='mypassword')
 
-parameters = pika.ConnectionParameters(
-    host='localhost',
-    port=5671,
-    credentials=credentials,
-    ssl=True,
-    ssl_options=ssl_options,
-    connection_attempts=5,
-    retry_delay=15,
-    socket_timeout=10)
+parameters = pika.ConnectionParameters(host='localhost',
+                                       port=5671,
+                                       credentials=credentials,
+                                       ssl=True,
+                                       ssl_options=ssl_options)
 
 connection = pika.BlockingConnection(parameters)
 
 channel = connection.channel()
 
-channel.basic_publish(
-  exchange='logs',
-  routing_key='error',
-  body='Oh no! Something went wrong!')
+channel.basic_publish(exchange='logs',
+                      routing_key='error',
+                      body='Oh no! Something went wrong!')
 ```
