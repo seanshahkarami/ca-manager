@@ -18,6 +18,8 @@ scripts/build-ca
 You will be prompted for a password used to protect the CA's key. *Keep this
 password safe as it will be used to sign other application certificates.*
 
+You should now have the CA's key `keys/ca.key` and certificate `certs/ca.crt`.
+
 ### Generating an application key and certificate
 
 First, we'll generate an application key and certificate signing request.
