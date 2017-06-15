@@ -60,8 +60,8 @@ To complete this example, let's connect a Python client using the
 In order to authenticate the server, the client needs to know and trust who the
 CA is who signed the server certificate. Concretely, this means we need to copy
 the CA certificate to the client at some path `/path/to/ca.crt`. (The client
-*does not* need to copy of the CA's key! This should *never* leave the CA's
-machine!)
+*does not* need to copy of the CA's key! That should *never* leave the CA's
+own machine!)
 
 ```python
 import pika
