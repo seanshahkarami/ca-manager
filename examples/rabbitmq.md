@@ -16,6 +16,8 @@ scripts/gen-req rabbitmq
 scripts/sign-req rabbitmq
 ```
 
+### 2. Configure RabbitMQ broken with TLS/SSL
+
 This will produce an application key `keys/rabbitmq.key` and certificate
 `certs/rabbitmq.crt`.
 
@@ -49,6 +51,8 @@ Now, we'll create our config file `/etc/rabbitmq/rabbitmq.config`.
 
 This configuration uses TLS/SSL for both messaging and the management
 interface.
+
+### 3. Connect client using TLS/SSL host authentication
 
 To complete this example, let's connect a Python client using the
 [pika](http://pika.readthedocs.io/en/0.10.0/) library. Here's a
