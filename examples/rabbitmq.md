@@ -50,8 +50,9 @@ Now, we'll create our config file `/etc/rabbitmq/rabbitmq.config`.
 This configuration uses TLS/SSL for both messaging and the management
 interface.
 
-To complete this example, let's connect a Python client using the pika
-library. Here's a complete example:
+To complete this example, let's connect a Python client using the
+[pika](http://pika.readthedocs.io/en/0.10.0/) library. Here's a
+complete example:
 
 ```python
 import pika
