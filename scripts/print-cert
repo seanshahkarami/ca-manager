@@ -1,0 +1,3 @@
+#!/bin/bash
+
+openssl x509 -in certs/$1.crt -text -noout
