@@ -46,6 +46,9 @@ cat a certificate directly, the output looks something like this:
 
 ```sh
 $ cat certs/rabbitmq.crt
+```
+
+```
 -----BEGIN CERTIFICATE-----
 MIIDMDCCAhgCCQCgKekgnq/3LDANBgkqhkiG9w0BAQsFADBZMQswCQYDVQQGEwJV
 UzERMA8GA1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28xDzANBgNVBAMT
@@ -73,6 +76,9 @@ unpacked contents.
 
 ```sh
 $ scripts/print-cert rabbitmq
+```
+
+```
 Certificate:
     Data:
         Version: 1 (0x0)
