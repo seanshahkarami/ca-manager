@@ -1,3 +1,6 @@
 #!/bin/bash
 
-openssl req -new -x509 -days 3650 -nodes -newkey rsa:2048 -keyout ca.key -outform PEM -out ca.crt -subj '/C=US/ST=Illinois/L=Chicago/CN=TestCA/OU=Development' -sha256
+mkdir -p keys certs reqs
+chmod 700 keys
+
+openssl req -new -x509 -days 3650 -nodes -newkey rsa:2048 -keyout keys/ca.key -outform PEM -out certs/ca.crt -subj '/C=US/ST=Illinois/L=Chicago/CN=TestCA/OU=Development' -sha256
