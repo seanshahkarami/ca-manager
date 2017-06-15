@@ -64,8 +64,7 @@ ssl_options = {
 
 credentials = pika.PlainCredentials(
   username='myuser',
-  password='mypassword',
-)
+  password='mypassword')
 
 parameters = pika.ConnectionParameters(
     host='localhost',
@@ -75,14 +74,14 @@ parameters = pika.ConnectionParameters(
     ssl_options=ssl_options,
     connection_attempts=5,
     retry_delay=15,
-    socket_timeout=10,
-)
+    socket_timeout=10)
 
 connection = pika.BlockingConnection(parameters)
 
 channel = connection.channel()
 
-channel.basic_publish(exchange='logs',
-                      routing_key='error',
-                      body='Oh no! Something went wrong!')
+channel.basic_publish(
+  exchange='logs',
+  routing_key='error',
+  body='Oh no! Something went wrong!')
 ```
