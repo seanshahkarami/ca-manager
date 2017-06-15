@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# openssl genrsa -des3 -out ca.key 4096
+openssl req -new -x509 -days 3650 -newkey rsa:4096 -keyout ca.key -outform PEM -out ca.pem -subj '/C=US/ST=Illinois/L=Chicago/CN=TestCA/OU=Development' -sha256
+
+# openssl req -new \
+#            -x509 \
+#            -days 3650 \
+#            -key private/ca.key \
+#            -subj '/C=US/ST=Illinois/L=Chicago/CN=TestCA' \
+#            -outform PEM \
+#            -out certs/ca.pem
