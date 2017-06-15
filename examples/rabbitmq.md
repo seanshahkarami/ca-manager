@@ -32,16 +32,16 @@ Now, we'll create our config file `/etc/rabbitmq/rabbitmq.config`.
 [
   {rabbit, [
      {ssl_listeners, [5671]},
-     {ssl_options, [{cacertfile,"/Users/Sean/rabbitmq/ca.crt"},
-                    {certfile,"/Users/Sean/rabbitmq/rabbitmq.crt"},
-                    {keyfile,"/Users/Sean/rabbitmq/rabbitmq.key"}]}
+     {ssl_options, [{cacertfile,"/etc/rabbitmq/ca.crt"},
+                    {certfile,"/etc/rabbitmq/rabbitmq.crt"},
+                    {keyfile,"/etc/rabbitmq/rabbitmq.key"}]}
    ]},
    {rabbitmq_management,
      [{listener, [{port, 15671},
                   {ssl, true},
-                  {ssl_opts, [{cacertfile, "/Users/Sean/rabbitmq/ca.crt"},
-                              {certfile, "/Users/Sean/rabbitmq/rabbitmq.crt"},
-                              {keyfile, "/Users/Sean/rabbitmq/rabbitmq.key"}]}
+                  {ssl_opts, [{cacertfile, "/etc/rabbitmq/ca.crt"},
+                              {certfile, "/etc/rabbitmq/rabbitmq.crt"},
+                              {keyfile, "/etc/rabbitmq/rabbitmq.key"}]}
                  ]}
      ]}
 ].
