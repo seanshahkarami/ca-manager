@@ -16,10 +16,10 @@ scripts/gen-req rabbitmq
 scripts/sign-req rabbitmq
 ```
 
-### 2. Configure RabbitMQ broken with TLS/SSL
-
 This will produce an application key `keys/rabbitmq.key` and certificate
 `certs/rabbitmq.crt`.
+
+### 2. Configure RabbitMQ broken with TLS/SSL
 
 In order to configure RabbitMQ to use TLS/SSL, we'll first copy over the
 required files.
