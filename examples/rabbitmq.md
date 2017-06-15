@@ -49,3 +49,40 @@ Now, we'll create our config file `/etc/rabbitmq/rabbitmq.config`.
 
 This configuration uses TLS/SSL for both messaging and the management
 interface.
+
+To complete this example, let's connect a Python client using the pika
+library. Here's a complete example:
+
+```python
+import pika
+import ssl
+
+ssl_options = {
+    'ca_certs': '/path/to/ca.crt',
+    'cert_reqs': ssl.CERT_REQUIRED,
+}
+
+credentials = pika.PlainCredentials(
+  username='myuser',
+  password='mypassword',
+)
+
+parameters = pika.ConnectionParameters(
+    host='localhost',
+    port=5671,
+    credentials=credentials,
+    ssl=True,
+    ssl_options=ssl_options,
+    connection_attempts=5,
+    retry_delay=15,
+    socket_timeout=10,
+)
+
+connection = pika.BlockingConnection(parameters)
+
+channel = connection.channel()
+
+channel.basic_publish(exchange='logs',
+                      routing_key='error',
+                      body='Oh no! Something went wrong!')
+```
