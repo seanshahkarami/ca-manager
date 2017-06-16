@@ -139,6 +139,6 @@ If you're interested in learning more about the underlying details involved, her
 
 * [Public Key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography). I like the
 opening paragraph of the Wikipedia page as it immediately mentions two primary
-functions of public key cryptography: authentication / signing / verification and encryption / decryption. I think it's useful to have these two distinct applications explicitly mentioned and may clarify how these techniques can be used within TLS/SSL.
+functions of public key cryptography: authentication / signing / verification and encryption / decryption. I think it's useful to have these two distinct applications explicitly mentioned in order to clarify how these techniques might be used within TLS/SSL.
 
 * [X.509](https://en.wikipedia.org/wiki/X.509). This is a reference for the particular standard we're using for certificates. If you're interested in understanding the contents and background of these, this is a good place to start.
