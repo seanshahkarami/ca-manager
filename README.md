@@ -135,8 +135,7 @@ Certificate:
 
 ## Useful References
 
-If you're interested in learning more about the underlying details involved in
-this, here are some resources you may find useful.
+If you're interested in learning more about the underlying details involved, here are some resources you may find useful.
 
 * [Public Key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography). I like the
 opening paragraph of the Wikipedia page as it immediately mentions two primary
